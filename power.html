@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>The Power</title>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/foundation.css">
+  <style>
+
+  .card {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  -webkit-perspective: 5000;
+  perspective: 5000; 
+}
+
+.card .container {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: 0.6s;
+  transition: 0.6s; 
+}
+
+.card .container .front, .card .container .back {
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; 
+}
+
+.card .container .front .row, .card .container .front .column, .card .container .front .columns, .card .container .back .row, .card .container .back .column, .card .container .back .columns {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; 
+}
+
+.card .container .front {
+  z-index: 2; 
+}
+
+.card .container .back {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow-y: scroll;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg); 
+}
+
+.card .container:hover {
+  -webkit-transform: rotate3d(0, 1, 0, 180deg);
+  transform: rotate3d(0, 1, 0, 180deg); 
+}
+
+.card .container {
+  border: solid 1px #eeeeee; 
+}
+
+.card .container .front, .card .container .back {
+  padding: 1em; 
+}
+
+.card.square .container {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%; 
+}    
+
+</style>
+
+  <script src="js/custom.modernizr.js"></script>
+
+</head>
+<body>
+
+<!-- Navigation -->
+
+<nav class="top-bar" data-options="is_hover:false">
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name">
+      <h1><a href="#">The Power</a></h1>
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li class="divider"></li>
+      <li class="active"><a href="#">Main Item 1</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Main Item 2</a></li>
+      <li class="divider"></li>
+      <li class="has-dropdown"><a href="#">Main Item 3</a>
+
+        <ul class="dropdown">
+          <li class="has-dropdown"><a href="#">Dropdown Level 1a</a>
+
+            <ul class="dropdown">
+              <li><label>Dropdown Level 2 Label</label></li>
+              <li><a href="#">Dropdown Level 2a</a></li>
+              <li><a href="#">Dropdown Level 2b</a></li>
+              <li class="has-dropdown"><a href="#">Dropdown Level 2c</a>
+
+                <ul class="dropdown">
+                  <li><label>Dropdown Level 3 Label</label></li>
+                  <li><a href="#">Dropdown Level 3a</a></li>
+                  <li><a href="#">Dropdown Level 3b</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Dropdown Level 3c</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown Level 2d</a></li>
+              <li><a href="#">Dropdown Level 2e</a></li>
+              <li><a href="#">Dropdown Level 2f</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Dropdown Level 1b</a></li>
+          <li><a href="#">Dropdown Level 1c</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Dropdown Level 1d</a></li>
+          <li><a href="#">Dropdown Level 1e</a></li>
+          <li><a href="#">Dropdown Level 1f</a></li>
+          <li class="divider"></li>
+          <li><a href="#">See all &rarr;</a></li>
+        </ul>
+      </li>
+      <li class="divider"></li>
+    </ul>
+
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="divider hide-for-small"></li>
+      <li class="has-dropdown"><a href="#">Main Item 4</a>
+
+        <ul class="dropdown">
+          <li><label>Dropdown Level 1 Label</label></li>
+          <li class="has-dropdown"><a href="#" class="">Dropdown Level 1a</a>
+
+            <ul class="dropdown">
+              <li><a href="#">Dropdown Level 2a</a></li>
+              <li><a href="#">Dropdown Level 2b</a></li>
+              <li class="has-dropdown"><a href="#">Dropdown Level 2c</a>
+
+                <ul class="dropdown">
+                  <li><a href="#">Dropdown Level 3a</a></li>
+                  <li><a href="#">Dropdown Level 3b</a></li>
+                  <li><a href="#">Dropdown Level 3c</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown Level 2d</a></li>
+              <li><a href="#">Dropdown Level 2e</a></li>
+              <li><a href="#">Dropdown Level 2f</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Dropdown Level 1b</a></li>
+          <li><a href="#">Dropdown Level 1c</a></li>
+          <li class="divider"></li>
+          <li><label>Dropdown Level 1 Label</label></li>
+          <li><a href="#">Dropdown Level 1d</a></li>
+          <li><a href="#">Dropdown Level 1e</a></li>
+          <li><a href="#">Dropdown Level 1f</a></li>
+          <li class="divider"></li>
+          <li><a href="#">See all &rarr;</a></li>
+        </ul>
+      </li>
+      <li class="divider"></li>
+      <li class="has-form">
+        <form>
+          <div class="row collapse">
+            <div class="small-8 columns">
+              <input type="text">
+            </div>
+            <div class="small-4 columns">
+              <a href="#" class="alert button">Search</a>
+            </div>
+          </div>
+        </form>
+      </li>
+      <li class="divider show-for-small"></li>
+      <li class="has-form">
+        <a class="button" href="#">Button!</a>
+      </li>
+    </ul>
+  </section>
+</nav>
+ 
+  <!-- End Top Bar -->
+
+  <!-- Header -->
+  <div class="row">
+    <div class="large-12 columns">
+      <img src="img/ezoopower.jpg"><br><br>
+    </div>
+  </div>
+
+  <!-- End Header -->
+
+
+  <div class="row">
+
+    <div class="large-3 panel columns">
+      <img src="img/powerface.JPG">
+
+      <h4>Header</h4>
+
+      <p>Fusce ullamcorper mauris in eros dignissim molestie posuere felis blandit. Aliquam erat volutpat. Mauris ultricies posuere vehicula. Sed sit amet posuere erat. Quisque in ipsum non augue euismod dapibus non et eros.</p><hr>
+
+      <div class="row">
+        <div class="large-4 columns">
+        <a href="#" class="small button">Link</a>
+        </div>
+
+        <div class="large-4 columns">
+        <a href="#" class="small button">Link</a>
+        </div>
+
+        <div class="large-4 columns">
+        <a href="#" class="small button">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="large-9 columns">
+      <div class="panel">
+        <div class="row">
+
+            <div class="large-3 columns card">
+              <div class="container">
+                <div class="front">
+                  <img src="img/caseymaryampower2.jpg" />
+                </div>
+
+                <div class="back">
+                 <h5>This is a card.</h5>
+                 <p>This card shows some content on the front and some on the back, and can be flipped by hovering on a desktop, or by swiping across on a touch device.</p>
+                 <p>The back of the card is intentionally long, so that we can show both an example where the card is constrained to a square and where it is as long as the content on either side requires.</p>
+                 <p>This card shows some content on the front and some on the back, and can be flipped by hovering on a desktop, or by swiping across on a touch device.</p>
+                 <p>The back of the card is intentionally long, so that we can show both an example where the card is constrained to a square and where it is as long as the content on either side requires.</p>
+                </div>
+              </div>
+            </div>  
+
+
+            <div class="large-3 columns card">
+              <div class="container">
+                <div class="front">
+                  <img src="img/photo.jpg" />
+                </div>
+
+                <div class="back">
+                 <h5>This is a card.</h5>
+                 <p>This card shows some content on the front and some on the back, and can be flipped by hovering on a desktop, or by swiping across on a touch device.</p>
+                 <p>The back of the card is intentionally long, so that we can show both an example where the card is constrained to a square and where it is as long as the content on either side requires.</p>
+                 <p>This card shows some content on the front and some on the back, and can be flipped by hovering on a desktop, or by swiping across on a touch device.</p>
+                 <p>The back of the card is intentionally long, so that we can show both an example where the card is constrained to a square and where it is as long as the content on either side requires.</p>
+               </div>
+             </div>
+            </div>
+
+
+            <div class="large-3 columns card">
+              <div class="container">
+                <div class="front">
+                  <img src="img/bballpower.jpg" />
+                </div>
+
+                <div class="back">
+                 <h5>This is a card.</h5>
+                 <p>This card shows some content on the front and some on the back, and can be flipped by hovering on a desktop, or by swiping across on a touch device.</p>
+                 <p>The back of the card is intentionally long, so that we can show both an example where the card is constrained to a square and where it is as long as the content on either side requires.</p>
+                 <p>This card shows some content on the front and some on the back, and can be flipped by hovering on a desktop, or by swiping across on a touch device.</p>
+                 <p>The back of the card is intentionally long, so that we can show both an example where the card is constrained to a square and where it is as long as the content on either side requires.</p>
+               </div>
+             </div>
+            </div>              
+         
+
+
+
+          <div class="large-3 columns">
+            <img src="http://placehold.it/600x500&text=Thumbnail">
+          </div>
+
+          <div class="large-3 columns">
+            <img src="http://placehold.it/600x500&text=Thumbnail">
+          </div>
+
+          <div class="large-3 columns">
+            <img src="http://placehold.it/600x500&text=Thumbnail">
+          </div>
+
+          <div class="large-3 columns">
+            <img src="http://placehold.it/600x500&text=Thumbnail">
+          </div>
+
+          <div class="large-3 columns">
+            <img src="http://placehold.it/600x500&text=Thumbnail">
+          </div>
+
+          <div class="large-3 columns">
+            <img src="http://placehold.it/600x500&text=Thumbnail">
+          </div>
+
+          <div class="large-3 columns">
+            <img src="http://placehold.it/600x500&text=Thumbnail">
+          </div>
+
+          <div class="large-3 columns">
+            <img src="http://placehold.it/600x500&text=Thumbnail">
+          </div>
+
+          <div class="large-3 columns">
+            <img src="http://placehold.it/600x500&text=Thumbnail">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+          <div class="panel">
+            <h5>Subheader</h5>
+            <p>Sed sit amet posuere erat. Quisque in ipsum non augue euismod dapibus non et eros.</p>
+            <a href="#" class="small button">Link</a>
+          </div>
+        </div>
+
+        <div class="large-6 columns">
+          <div class="panel">
+            <h5>Subheader</h5>
+            <p>Sed sit amet posuere erat. Quisque in ipsum non augue euismod dapibus non et eros.</p>
+            <a href="#" class="small button">Link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+
+  <footer class="row">
+  <div class="large-12 columns"><hr />
+      <div class="row">
+
+        <div class="large-6 columns">
+            <p>&copy; Copyright no one at all. Go to town.</p>
+        </div>
+
+        <div class="large-6 columns">
+            <ul class="inline-list right">
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+              <li><a href="#">Link 4</a></li>
+            </ul>
+        </div>
+
+      </div>
+  </div>
+  </footer>
+
+  <script>
+  document.write('<script src=js/vendor/' +
+  ('__proto__' in {} ? 'zepto' : 'jquery') +
+  '.js><\/script>')
+  </script>
+  <script src="js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+
+</body>
+</html>
