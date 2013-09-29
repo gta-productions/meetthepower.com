@@ -5,7 +5,7 @@
 /*jshint scripturl:true */
 (function () {
 
-  var styleSheet = "css/togetherjs.css";
+  var styleSheet = "/togetherjs/togetherjs.css";
 
   var baseUrl = "https://togetherjs.com";
   if (baseUrl == "__" + "baseUrl__") {
@@ -427,7 +427,7 @@
     // The base URL of the hub
     hubBase: defaultHubBase,
     // A function that will return the name of the user:
-    getUserName: null,
+    getUserName: true,
     // A function that will return the color of the user:
     getUserColor: null,
     // A function that will return the avatar of the user:
@@ -446,7 +446,7 @@
     // The name of this tool as provided to users.  The UI is updated to use this.
     // Because of how it is used in text it should be a proper noun, e.g.,
     // "MySite's Collaboration Tool"
-    toolName: "eCW Collaboration Tool",
+    toolName: "eCW Connect",
     // Used to auto-start TogetherJS with a {prefix: pageName, max: participants}
     // Also with findRoom: "roomName" it will connect to the given room name
     findRoom: null,
