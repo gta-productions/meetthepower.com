@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,150 +6,247 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>The Power</title>
+    <title>Potential Gallery for MeetThePower</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/dist/css/bootstrap-slate-old.min.css" rel="stylesheet">
 
     <!-- Custom CSS for the 'Thumbnail Gallery' Template -->
-    <link href="assets/css/thumbnail-gallery.css" rel="stylesheet">
-    <link href="assets/css/bootstrap-lightbox.min.css" rel="stylesheet">
+    <link href="bootstrap/dist/css/thumbnail-gallery.css" rel="stylesheet">
+    
+
+    <!-- custom CSS for Lightbox -->
+    <link href="bootstrap/dist/css/bootstrap-lightbox.min.css" rel="stylesheet">
+
+    <!-- custom CSS for old jumbotron -->
+    <link href="bootstrap/dist/css/jumbotron-old.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
   </head>
 
   <body>
 
-
-<nav class="navbar navbar-fixed-top navbar-default" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><span class="sr-only">Toggle navigation</span></button> <a class="navbar-brand" href="index.html">The Power</a>
-        </div><!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="news.html">News</a>
-                </li>
-                <li>
-                    <a href="gallery.html">Gallery</a>
-                </li>
-                <li>
-                    <a href="locations.html">Locations</a>
-                </li>
-                <li>
-                    <a href="history.html">History</a>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Responsible Parties <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="#">Casey</a>
-                        </li>
-                        <li>
-                            <a href="#">Tyler</a>
-                        </li>
-                        <li>
-                            <a href="#">Tim</a>
-                        </li>
-                        <li>
-                            <a href="#">Hannah</a>
-                        </li>
-                        <li>
-                            <a href="#">Maryam</a>
-                        </li>
-                        <li>
-                            <a href="#">Colin</a>
-                        </li>
-                        <li>
-                            <a href="#">Steve-O</a>
-                        </li>
-                        <li>
-                            <a href="#">Kami</a>
-                        </li>
-                        <li>
-                            <a href="#">Matt</a>
-                        </li>
-                        <li>
-                            <a href="#">Greg</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li style="list-style: none; display: inline">
-                    <form class="navbar-form navbar-right" role="search">
-                        <button href="#myModal" data-toggle="modal" type="submit" class="btn btn-warning">Sign in <span class="glyphicon glyphicon-chevron-right"></span></button>
-                    </form>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Random <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="#"><span class="glyphicon glyphicon-bell"></span> Steelers</a>
-                        </li>
-                        <li>
-                            <a href="#">Music</a>
-                        </li>
-                        <li>
-                            <a href="#">Hilarious Shit</a>
-                        </li>
-                        <li>
-                            <a data-toggle="modal" href="#betaModal">Join the Beta</a>
-                        </li>
-                        <li>
-                            <a href="https://news.ycombinator.com">Hacker News</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container -->
-</nav>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button> <a class="brand" href="#">The Power</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="active"><a href="gallery.html">Gallery</a></li>
+                    <li><a href="powermap.html">PowerMap</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Get Weird <i class="icon-white icon-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="powermap.html">Where's the Power?</a></li>
+                            <li><a href="blog.html">The Blog</a></li>
+                            <li><a href="">Power-ku</a></li>
+                            <li class="nav-header">Random Shit</li>
+                            <li><a href="http://www.jambase.com">Jammin</a></li>
+                            <li><a href="rain.html">Make It Rain!</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav pull-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In</a>
+                        <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+                            <form method="post" action="login" accept-charset="UTF-8">
+                                <input style="margin-bottom: 15px;" type="text" placeholder="Username" id="username" name="username"> <input style="margin-bottom: 15px;" type="password" placeholder="Password" id="password" name="password"> <input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1"> <label class="string optional" for="user_remember_me">Remember me</label> <input class="btn btn-success btn-block" type="submit" id="sign-in" value="Sign In"> <label style="text-align:center;margin-top:5px">or</label> <input class="btn btn-inverse btn-block" type="button" id="sign-in-google" value="Sign In with Google"> <input class="btn btn-inverse btn-block" type="button" id="sign-in-twitter" value="Sign In with Twitter">
+                            </form>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Randomness</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">The Power People</a></li>
+                            <li><a href="#">Development Resources</a></li>
+                            <li><a href="#">Music Blogs</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form" role="Search">
+                    <button type="submit" data-toggle="modal" href="#betaModal" class="btn btn-info">Subscribe</button>
+                </form>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div><!--    back to zero -->
     
     <div class="container">
 
       <div class="row">
       
         <div class="col-lg-12">
-          <h1 class="page-header">Thumbnail Gallery</h1>
+          <h1 class="page-header text-info">Power Pics</h1>
         </div>
         
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-          <a class="thumbnail" href="#"><img class="img-responsive" src="powerpics/power1.jpg"></a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-          <a class="thumbnail" href="#"><img class="img-responsive" src="powerpics/power2.jpg"></a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-          <a class="thumbnail" href="#"><img class="img-responsive" src="powerpics/power3.jpg"></a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-          <a class="thumbnail" href="#"><img class="img-responsive" src="powerpics/power4.jpg"></a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-          <a class="thumbnail" href="#"><img class="img-responsive" src="powerpics/power5.jpg"></a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-          <a class="thumbnail" href="#"><img class="img-responsive" src="powerpics/power6.jpg"></a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-          <a class="thumbnail" href="#"><img class="img-responsive" src="powerpics/power7.jpg"></a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-          <a class="thumbnail" href="#"><img class="img-responsive" src="http://placehold.it/400x300"></a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-          <a class="thumbnail" href="#"><img class="img-responsive" src="http://placehold.it/400x300"></a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-          <a class="thumbnail" href="#"><img class="img-responsive" src="http://placehold.it/400x300"></a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-          <a class="thumbnail" href="#"><img class="img-responsive" src="http://placehold.it/400x300"></a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-          <a class="thumbnail" href="#"><img class="img-responsive" src="http://placehold.it/400x300"></a>
-        </div>
+        <ul class="thumbnails">
+          <li class="span4">
+            <a class="thumbnail" data-toggle="lightbox" href="#power18">
+              <img class="img-thumbnail" src="img/powerpics/power18.jpg">
+            </a>
+          </li>
+          <div id="power18" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+            <div class='lightbox-content'>
+              <img src="img/powerpics/power18.jpg">
+              <div class="lightbox-caption"><p>Your caption here</p></div>
+            </div>
+          </div>
+          <li class="span4">
+            <a class="thumbnail" data-toggle="lightbox" href="#power19">
+              <img class="thumbnail" src="img/powerpics/power19.jpg">
+            </a>
+          </li>
+          <div id="power19" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+            <div class='lightbox-content'>
+              <img src="img/powerpics/power19.jpg">
+              <div class="lightbox-caption"><p>Your caption here</p></div>
+            </div>
+          </div>
+          <li class="span4">
+            <a class="thumbnail" data-toggle="lightbox" href="#power24">
+              <img class="thumbnail" src="img/powerpics/power24.jpg">
+            </a>
+          </li>
+          <div id="power24" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+            <div class='lightbox-content'>
+              <img src="img/powerpics/power24.jpg">
+              <div class="lightbox-caption"><p>Your caption here</p></div>
+            </div>
+          </div>
+          <li class="span4">
+            <a class="thumbnail" data-toggle="lightbox" href="#power21">
+              <img class="thumbnail" src="img/powerpics/power21.jpg">
+            </a>
+          </li>
+          <div id="power21" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+            <div class='lightbox-content'>
+              <img src="img/powerpics/power21.jpg">
+              <div class="lightbox-caption"><p>Your caption here</p></div>
+            </div>
+          </div>
+          <li class="span4">
+            <a class="thumbnail" data-toggle="lightbox" href="#power22">
+              <img class="thumbnail" src="img/powerpics/power22.jpg">
+            </a>
+          </li>
+          <div id="power23" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+            <div class='lightbox-content'>
+              <img src="img/powerpics/power23.jpg">
+              <div class="lightbox-caption"><p>Your caption here</p></div>
+            </div>
+          </div>
+          <li class="span4">
+            <a class="thumbnail" data-toggle="lightbox" href="#power20">
+              <img class="thumbnail" src="img/powerpics/power20.jpg">
+            </a>
+          </li>
+          <div id="power20" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+            <div class='lightbox-content'>
+              <img src="img/powerpics/power20.jpg">
+              <div class="lightbox-caption"><p>Your caption here</p></div>
+            </div>
+          </div>
+          <li class="span4">
+            <a class="thumbnail" data-toggle="lightbox" href="#power25">
+              <img class="thumbnail" src="img/powerpics/power25.jpg">
+            </a>
+          </li>
+          <div id="power25" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+            <div class='lightbox-content'>
+              <img src="img/powerpics/power25.jpg">
+              <div class="lightbox-caption"><p>Your caption here</p></div>
+            </div>
+          </div>
+          <li class="span4">
+            <a class="thumbnail" data-toggle="lightbox" href="#power26">
+              <img class="thumbnail" src="img/powerpics/power26.jpg">
+            </a>
+          </li>
+          <div id="power26" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+            <div class='lightbox-content'>
+              <img src="img/powerpics/power26.jpg">
+              <div class="lightbox-caption"><p>Your caption here</p></div>
+            </div>
+          </div>
+          <li class="span4">
+            <a class="thumbnail" data-toggle="lightbox" href="#power27">
+              <img class="thumbnail" src="img/powerpics/power27.jpg">
+            </a>
+          </li>
+          <div id="power27" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+            <div class='lightbox-content'>
+              <img src="img/powerpics/power27.jpg">
+              <div class="lightbox-caption"><p>Your caption here</p></div>
+            </div>
+          </div>
+
       </div>
+
+<div class="pagination pagination-centered">
+  <ul>
+    <li><a href="gallery2.html">Prev</a></li>
+    <li><a href="gallery.html">1</a></li>
+    <li><a href="gallery2.html">2</a></li>
+    <li class="active"><a href="gallery3.html">3</a></li>
+    <li><a href="gallery4.html">4</a></li>
+    <li><a href="gallery5.html">5</a></li>
+    <li><a href="gallery4.html"><i class="icon-white icon-chevron-right"></i></a></li>
+  </ul>
+</div>
+
+<!-- BetaModal Code starts here -->
+
+
+<div id="betaModal" class="modal hide fade">
+    <div class="modal-header">
+            <button class="close" data-dismiss="modal">×</button>
+            <h3>Join The Power</h3>
+    </div>
+<div class="modal-body">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="span6">
+            <div class="logowrapper">
+                <img class="logoicon" src="img/glen.jpg" alt="App Logo"/>
+            </div>
+            </div>
+            <div class="span6">
+                <form class="form-horizontal">
+                    <p class="help-block">First Name</p>
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-white icon-user"></i></span><input class="prependedInput" size="16" type="text">
+                    </div>
+                    <p class="help-block">Last Name</p>
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-white icon-user"></i></span><input class="prependedInput" size="16" type="text">
+                    </div>
+                    <p class="help-block">Email</p>
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-white icon-envelope"></i></span><input class="prependedInput" size="16" type="email">
+                    </div>
+                    <hr>
+                    <div class="help-block">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-danger">Stay Powerless</button>
+      <button type="submit" class="btn btn-success">Get Powerful</button>
+    </div>
+</div>
+
+
+
+<!--beta modal code ends here                  -->
       
       <hr>
 
@@ -164,81 +260,12 @@
       
     </div><!-- /.container -->
 
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">Sign In</h4>
-        </div>
-        <div class="modal-body">
-          <form class="form-signin">
-            <input type="text" class="form-control" placeholder="Email address" autofocus>
-            <br></br>
-            <input type="password" class="form-control" placeholder="Password">
-            <br></br>
-            <label class="checkbox">
-              <input type="checkbox" value="remember-me"> Remember me
-            </label>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-info pull-left" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-warning" data-dismiss="modal">Forgot My Password</button>
-          <button type="button" class="btn btn-success">Sign In</button>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-
-
-
-<!--Beta Modal content here -->
-<div id="betaModal" class="modal hide fade">
-    <div class="modal-header">
-            <button class="close" data-dismiss="modal">×</button>
-            <h3>Join the Beta</h3>
-    </div>
-<div class="modal-body">
-    <div class="row-fluid">
-        <div class="span12">
-            <div class="span6">
-            <div class="logowrapper">
-                <img class="logoicon" src="assets/img/power6.jpg" alt="App Logo"/>
-            </div>
-            </div>
-            <div class="span6">
-                <form class="form-horizontal">
-                    <p class="help-block">Name</p>
-                    <div class="input-prepend">
-                        <span class="add-on">*</span><input class="prependedInput" size="16" type="text">
-                    </div>
-                    <p class="help-block">Email</p>
-                    <div class="input-prepend">
-                        <span class="add-on">@</span><input class="prependedInput" size="16" type="email">
-                    </div>
-                    <hr>
-                    <div class="help-block">
-                        <button type="submit" class="btn btn-large btn-info">Request an Invite</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-    <div class="modal-footer">
-        <p><i>Lastest Update on October 2nd, 2012</i></p>
-    </div>
-</div>
-
-
-
-
-
   <!-- javascript -->
-  <script src="assets/js/jquery.js"></script>
-  <script src="assets/js/bootstrap.js"></script>
-  <script src="assets/js/bootstrap-lightbox.min.js"></script>
+  <script src="bootstrap/dist/js/jquery-lightbox.js"></script>
+  <script src="bootstrap/dist/js/bootstrap-old.min.js"></script>
+  <script src="bootstrap/dist/js/bootstrap-lightbox.min.js"></script>
+  <script src="bootstrap/dist/js/scale.fix.js"></script>
+  <script src="bootstrap/dist/js/prettify.js"></script>
 
   </body>
 

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Basic Company Template for Bootstrap 3</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/dist/css/bootstrap-slate.min.css" rel="stylesheet">
+
+    <!-- Custom CSS for the 'One Page Wonder' Template -->
+    <link href="bootstrap/dist/css/one-page-wonder.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">The Power</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="home.html">Home</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="powermap.html">PowerMap</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Get Weird <i class="icon-white icon-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                  <li><a href="powermap.html">Where's the Power?</a></li>
+                  <li><a href="blog.html">The Blog</a></li>
+                  <li><a href="#">Power-ku</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-header">Random Shit</li>
+                  <li><a href="http://www.jambase.com">Jammin</a></li>
+                  <li><a href="rain.html">Make It Rain!</a></li>
+                </ul>
+              </li>
+            </ul>
+          <ul class="nav pull-right">
+          <li class="dropdown">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+              <form method="post" action="login" accept-charset="UTF-8">
+                <input style="margin-bottom: 15px;" type="text" placeholder="Username" id="username" name="username">
+                <input style="margin-bottom: 15px;" type="password" placeholder="Password" id="password" name="password">
+                <input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1">
+                <label class="string optional" for="user_remember_me"> Remember me</label>
+                <input class="btn btn-success btn-block" type="submit" id="sign-in" value="Sign In">
+                <label style="text-align:center;margin-top:5px">or</label>
+                                <input class="btn btn-inverse btn-block" type="button" id="sign-in-google" value="Sign In with Google">
+                <input class="btn btn-inverse btn-block" type="button" id="sign-in-twitter" value="Sign In with Twitter">
+              </form>
+            </div>
+          </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form" role="Search">
+            <button type="submit" data-toggle="modal" href="#betaModal" class="btn btn-info">Subscribe</button>
+          </form>
+
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>   <!--    back to zero -->
+
+    <div class="header-image">
+
+      <div class="headline">
+        <div class="container">
+          <h1 class="text-denger">This is The Power</h1>
+          <h2>Get Ready</h2>
+        </div>
+      </div>
+
+    </div><!-- /header-image -->
+
+    <div class="container">
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="featurette" id="about">
+        <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
+        <h2 class="featurette-heading">This First Heading <span class="text-muted">Will Catch Your Eye</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette" id="services">
+        <img class="featurette-image img-circle img-responsive pull-left" src="http://placecreature.com/500/500">
+        <h2 class="featurette-heading">The Second Heading <span class="text-muted">Is Pretty Cool Too.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette" id="contact">
+        <img class="featurette-image img-circle img-responsive pull-right" src="http://placecreature.com/500/500">
+        <h2 class="featurette-heading">The Third Heading <span class="text-muted">Will Seal the Deal.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+
+      <!-- /END THE FEATURETTES -->
+
+      <hr>
+
+      <!-- FOOTER -->
+      <footer>
+        <p>
+          Copyright &copy; Company 2013 &middot; Facebook &middot; Twitter &middot; Google+
+        </p>
+      </footer>
+      <!-- /END OF FOOTER -->
+
+    </div><!-- /container -->
+
+  <!-- javascript -->
+  <script src="bootstrap/dist/js/jquery.js"></script>
+  <script src="bootstrap/dist/js/bootstrap.js"></script>
+
+  </body>
+
+</html>

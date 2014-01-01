@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Potential Gallery for MeetThePower</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/dist/css/bootstrap-slate-old.min.css" rel="stylesheet">
+
+    <!-- Custom CSS for the 'Thumbnail Gallery' Template -->
+    <link href="bootstrap/dist/css/thumbnail-gallery.css" rel="stylesheet">
+    
+
+    <!-- custom CSS for Lightbox -->
+    <link href="bootstrap/dist/css/bootstrap-lightbox.min.css" rel="stylesheet">
+
+    <!-- custom CSS for old jumbotron -->
+    <link href="bootstrap/dist/css/jumbotron-old.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button> <a class="brand" href="#">The Power</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li class="active"><a href="powermap.html">PowerMap</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Get Weird <i class="icon-white icon-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="powermap.html">Where's the Power?</a></li>
+                            <li><a href="blog.html">The Blog</a></li>
+                            <li><a href="">Power-ku</a></li>
+                            <li class="nav-header">Random Shit</li>
+                            <li><a href="http://www.jambase.com">Jammin</a></li>
+                            <li><a href="rain.html">Make It Rain!</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav pull-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In</a>
+                        <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+                            <form method="post" action="login" accept-charset="UTF-8">
+                                <input style="margin-bottom: 15px;" type="text" placeholder="Username" id="username" name="username"> <input style="margin-bottom: 15px;" type="password" placeholder="Password" id="password" name="password"> <input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1"> <label class="string optional" for="user_remember_me">Remember me</label> <input class="btn btn-success btn-block" type="submit" id="sign-in" value="Sign In"> <label style="text-align:center;margin-top:5px">or</label> <input class="btn btn-inverse btn-block" type="button" id="sign-in-google" value="Sign In with Google"> <input class="btn btn-inverse btn-block" type="button" id="sign-in-twitter" value="Sign In with Twitter">
+                            </form>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Randomness</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">The Power People</a></li>
+                            <li><a href="#">Development Resources</a></li>
+                            <li><a href="#">Music Blogs</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form" role="Search">
+                    <button type="submit" data-toggle="modal" href="#betaModal" class="btn btn-info">Subscribe</button>
+                </form>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div><!--    back to zero -->
+    
+<div class="container">
+
+<div class="row-fluid">
+  <div class="span8">
+      <iframe width="620" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?t=m&amp;q=307+E+92nd+St,+New+York,+NY&amp;ie=UTF8&amp;hq=&amp;hnear=307+E+92nd+St,+New+York,+10128&amp;ll=40.781646,-73.948202&amp;spn=0.031196,0.054932&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://www.google.com/maps?t=m&amp;q=307+E+92nd+St,+New+York,+NY&amp;ie=UTF8&amp;hq=&amp;hnear=307+E+92nd+St,+New+York,+10128&amp;ll=40.781646,-73.948202&amp;spn=0.031196,0.054932&amp;z=14&amp;iwloc=A&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+  </div>
+  
+  <div class="span4 ">
+    <h2 class="text-warning">The Power Spot</h2>
+    <address>
+      <strong>The Power Spot</strong><br>
+      307 E 92nd St<br>
+      New York, NY<br>
+      70118<br>
+      <abbr title="Phone">P:</abbr> Power ain't got no Phone
+    </address>
+  </div>
+</div>
+
+
+<!-- BetaModal Code starts here -->
+
+
+<div id="betaModal" class="modal hide fade">
+    <div class="modal-header">
+            <button class="close" data-dismiss="modal">×</button>
+            <h3>Join The Power</h3>
+    </div>
+<div class="modal-body">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="span6">
+            <div class="logowrapper">
+                <img class="logoicon" src="img/glen.jpg" alt="App Logo"/>
+            </div>
+            </div>
+            <div class="span6">
+                <form class="form-horizontal">
+                    <p class="help-block">First Name</p>
+                    <div class="input-prepend">
+                        <span class="add-on">+</span><input class="prependedInput" size="16" type="text">
+                    </div>
+                    <p class="help-block">Last Name</p>
+                    <div class="input-prepend">
+                        <span class="add-on">+</span><input class="prependedInput" size="16" type="text">
+                    </div>
+                    <p class="help-block">Email</p>
+                    <div class="input-prepend">
+                        <span class="add-on">@</span><input class="prependedInput" size="16" type="email">
+                    </div>
+                    <hr>
+                    <div class="help-block">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-danger">Stay Powerless</button>
+      <button type="submit" class="btn btn-success">Get Powerful</button>
+    </div>
+</div>
+
+
+
+<!--beta modal code ends here                  -->
+      
+      <hr>
+
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Copyright &copy; Company 2013 &middot; Facebook &middot; Twitter &middot; Google+</p>
+          </div>
+        </div>
+      </footer>
+      
+    </div><!-- /.container -->
+
+  <!-- javascript -->
+  <script src="bootstrap/dist/js/jquery-lightbox.js"></script>
+  <script src="bootstrap/dist/js/bootstrap-old.min.js"></script>
+  <script src="bootstrap/dist/js/bootstrap-lightbox.min.js"></script>
+  <script src="bootstrap/dist/js/scale.fix.js"></script>
+  <script src="bootstrap/dist/js/prettify.js"></script>
+
+  </body>
+
+</html>
